@@ -1,0 +1,68 @@
+<style>
+	galeria{}
+	h2{
+		text-align: center;
+		font-size: 50px;
+		background-color: gray;
+		}
+	.titulo{
+		font-size: 26px;
+		text-align: center;
+		height: 30px;
+		}
+	.subtitulo{
+		font-size: 20px;
+		text-align: center;
+		}
+	.libro{
+		width: 25%;
+		height: auto;
+		background: rgb(250,180,90);
+		float: left;
+		border-radius:20px;
+		margin: 2%;
+		flex-shrink: 4;
+		padding: 10px;
+		padding-top: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		}
+	.imagen{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto; 
+		height: auto, 300px;
+		border-radius:20px;	
+		}
+	.bloque{
+		display: flex;
+		justify-content: space-between;
+		}
+	@media only screen and (max-width:500px){
+		.bloque{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.libro{
+			width: 85%;
+			height: auto;
+			background: rgb(250,180,90);
+			border-radius:20px;
+			margin: 2%;
+			padding: 10px;
+			padding-top: 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.imagen{
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto; 
+			height: auto;
+			border-radius:20px;			
+		}
+	}
+</style>
