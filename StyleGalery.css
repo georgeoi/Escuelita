@@ -1,0 +1,82 @@
+h2{
+	text-align: center;
+	font-size: 50px;
+	background-color: gray;
+	}
+body {
+    display: block;
+    margin: 0px;
+}
+.titulo{
+	font-size: 26px;
+	text-align: center;
+	height: 30px;
+	}
+.subtitulo{
+	font-size: 20px;
+	text-align: center;
+	}
+.libro{
+	flex-basis: 30%;
+	height: auto;
+	background: rgb(250,180,90);
+	float: left;
+	border-radius:20px;
+	padding: 10px;
+	padding-top: 0px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+	}
+.imagen{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto; 
+	height: auto;
+	border-radius:20px;	
+	}
+.bloque{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	}
+.ver {
+	display: flex;
+}
+.boton{
+	padding: 12px 16px;
+	width: 150px;
+  	background-color: rgb(90, 218, 250);
+	cursor: pointer;
+}
+.boton:hover {
+	background-color: rgb(90, 165, 250);
+}
+@media only screen and (max-width:500px){
+	.bloque{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.libro{
+		width: 85%;
+		height: auto;
+		background: rgb(250,180,90);
+		border-radius:20px;
+		margin: 2%;
+		padding: 10px;
+		padding-top: 0px;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+	}
+	.imagen{
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto; 
+		height: auto;
+		border-radius:20px;			
+	}
+}

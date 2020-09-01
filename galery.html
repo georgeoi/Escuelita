@@ -1,72 +1,92 @@
 <html>
 	<head>
-		<style>
-			h3{
-				text-align: center;
-				font-size: 50px;
-				background-color: gray;
-				}
-			.titulo{
-				font-size: 26px;
-				text-align: center;
-				padding: 5px;
-				height: 30px;
-				}
-			.subtitulo{
-				font-size: 16px;
-				text-align: center;
-				}
-			#libro{
-				width: 25%;
-				height: 450px;
-				background: rgb(250,180,90);
-				float: left;
-				border-radius:20px;
-				margin: 2%;
-				margin-left: 70px;
-				}
-			#imagen{
-				width: 80%;
-				height: 300px;
-				border-radius:20px;
-				margin-left:30px;		
-				}
-				
-		</style>
+		<link rel="stylesheet" href="C:\Users\juaco\OneDrive\Escritorio\programa\StyleGalery.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
 	</head>
 	<body>
 		<header>
-			<h3> Galeria</h3>
+			<h2>Galeria</h2>
 		</header>
-		<div id="libro">
-				<p class="titulo">Cuentos de la selva</p>
-				<p class="subtitulo">Horacio Quiroga</p>
-				<img id="imagen" src="https://www.libreriapensar.com/wp-content/uploads/2020/04/products-2983.jpg" alt="prueba libro">
-		</div>
-		<div id="libro">
-				<p class="titulo">Cuando comen los leones</p>
-				<p class="subtitulo">Willbur Smith</p>
-				<img id="imagen" src="https://http2.mlstatic.com/cuando-comen-los-leones-wilbur-smith-emece-edicion-grande-D_NQ_NP_666524-MLA31205470452_062019-F.jpg" alt="prueba libro">
+		
+		<h3><u>Filtro por autor:</u></h3>
+			<button class="boton" onclick="filtro('todos')">Todos</button>
+			<button class="boton" onclick="filtro('Willbur')">Willbur Smith</button>
+			<button class="boton" onclick="filtro('Horacio')">Horacio Quiroga</button>
+			<button class="boton" onclick="filtro('J.K.')">J.K.Rowling</button>
+			<button class="boton" onclick="filtro('F.Scott')">F. Scott Fitzgerald</button>
+			<button class="boton" onclick="filtro('Rick')">Rick Riordan</button>
+		<section class="bloque">
+			<div class="libro Horacio">
+					<p class="titulo">Cuentos de la selva</p>
+					<p class="subtitulo">Horacio Quiroga</p>
+					<img class="imagen" src="https://www.libreriapensar.com/wp-content/uploads/2020/04/products-2983.jpg" alt="prueba libro">
 			</div>
-		<div id="libro">
-				<p class="titulo">Muere el gorrión</p>
-				<p class="subtitulo">Willbur Smith</p>
-				<img id="imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqqs53cMAci8JUPV-0krP1TDj2hjxQml1_AA&usqp=CAU" alt="prueba libro">
-		</div> 
-		<div id="libro">
-				<p class="titulo">Harry Potter y las reliquias de la muerte</p>
-				<p class="subtitulo">J.K.Rowling</p>
-				<img id="imagen" src="https://imagessl5.casadellibro.com/a/l/t5/45/9788498383645.jpg" alt="prueba libro">
-		</div>
-		<div id="libro">
-				<p class="titulo">The great Gatsby</p>
-				<p class="subtitulo">F. Scott Fitzgerald</p>
-				<img id="imagen" src="https://prodimage.images-bn.com/pimages/9780743273565_p0_v8_s1200x630.jpg" alt="prueba libro">
-		</div>
-		<div id="libro">
-				<p class="titulo">Percy Jackson y el ladron del rayo</p>
-				<p class="subtitulo">Rick Riordan</p>
-				<img id="imagen" src="https://http2.mlstatic.com/percy-jackson-and-the-olympians-1-the-lightning-thief-de-sin-D_NQ_NP_994736-MLA29513202498_022019-F.jpg" alt="prueba libro">
-		</div>
+			<div class="libro Willbur">
+					<p class="titulo">Cuando comen los leones</p>
+					<p class="subtitulo">Willbur Smith</p>
+					<img class="imagen" src="https://http2.mlstatic.com/cuando-comen-los-leones-wilbur-smith-emece-edicion-grande-D_NQ_NP_666524-MLA31205470452_062019-F.jpg" alt="prueba libro">
+			</div>
+			<div class="libro Willbur">
+					<p class="titulo">Muere el gorriï¿½n</p>
+					<p class="subtitulo">Willbur Smith</p>
+					<img class="imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqqs53cMAci8JUPV-0krP1TDj2hjxQml1_AA&usqp=CAU" alt="prueba libro">
+			</div>
+			<div class="libro J.K.">
+					<p class="titulo">Harry Potter y las reliquias de la muerte</p>
+					<p class="subtitulo">J.K.Rowling</p>
+					<img class="imagen" src="https://imagessl5.casadellibro.com/a/l/t5/45/9788498383645.jpg" alt="prueba libro">
+			</div>
+			<div class="libro F.Scott">
+					<p class="titulo">The great Gatsby</p>
+					<p class="subtitulo">F. Scott Fitzgerald</p>
+					<img class="imagen" src="https://prodimage.images-bn.com/pimages/9780743273565_p0_v8_s1200x630.jpg" alt="prueba libro">
+			</div>
+			<div class="libro Rick">
+					<p class="titulo">Percy Jackson y el ladron del rayo</p>
+					<p class="subtitulo">Rick Riordan</p>
+					<img class="imagen" src="https://http2.mlstatic.com/percy-jackson-and-the-olympians-1-the-lightning-thief-de-sin-D_NQ_NP_994736-MLA29513202498_022019-F.jpg" alt="prueba libro">
+			</div>
+		</section>
+		
+		<script>
+			//var elemento = document.getElementById("miboton");
+			filtro("todos")
+			function filtro(autor) {
+				var x, i;
+				x = document.getElementsByClassName("libro");
+				if (autor == "todos") autor = "";
+				// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+				for (i = 0; i < x.length; i++) {
+					RemoveClass(x[i], "ver");
+					if (x[i].className.indexOf(autor) > -1) AddClass(x[i], "ver");
+				}
+				}
 
+				// Show filtered elements
+				function AddClass(element, name) {
+				var i, arr1, arr2;
+				arr1 = element.className.split(" ");
+				arr2 = name.split(" ");
+				for (i = 0; i < arr2.length; i++) {
+					if (arr1.indexOf(arr2[i]) == -1) {
+					element.className += " " + arr2[i];
+					}
+				}
+				}
+
+				// Hide elements that are not selected
+				function RemoveClass(element, name) {
+				var i, arr1, arr2;
+				arr1 = element.className.split(" ");
+				arr2 = name.split(" ");
+				for (i = 0; i < arr2.length; i++) {
+					while (arr1.indexOf(arr2[i]) > -1) {
+					arr1.splice(arr1.indexOf(arr2[i]), 1);
+					}
+				}
+				element.className = arr1.join(" ");
+				}
+		</script>
+		
+		</body>
 	</html>
